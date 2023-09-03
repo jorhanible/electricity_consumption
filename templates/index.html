@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Strøm - regne ut sin egen pris</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<body>
+    <h1>Strømbruks kostnad</h1>
+    <!-- Plot showcaing electricity consumption originally recorded -->
+    <div class="content_container">
+        <div class="content_styled">
+            <p>Nedenfor kan du se oversikten over ditt timebaserte strømbruk mellom 17.12.2022 og 07.01.2023.</p>
+            <img src="{{ url_for('static', filename='electricity_consumption_plot.png') }}" alt="Electricity Consumption Plot">
+            <p>For å regne ut hvor mye du kan forvente å betale månedelig, spår vi strømforbruket ditt for januar.</p>
+        </div>
+    </div>
+     <!-- Plot comparing recorded and predicted electricity consumption -->
+    <div class="content_container">
+        <div class="content_styled">
+            <p>Rød linje viser hvor mye strøm du vil i gjennomsnitt bruke gjennom januar.</p>
+            <img src="{{ url_for('static', filename='comparison_consumption_plot.png') }}" alt="Electricity Consumption Plot in comparison">
+            <p>Ved dette i bakhodet, regner vi ut kostnader for hver leverandør.</p>
+        </div>
+    </div>
+    <div class="content_container">
+        <div class="content_styled">
+            <p>{{ message }}</p>
+        </div>
+    </div>
+</body>
+</html>
+
+<style is:inline>
+    
+    .content_container {
+        min-height: 300px;
+        min-width: 300px;
+        height: 100%;
+        width: 100%;
+        margin: .5rem .5rem .5rem .5rem;
+        padding: .5rem;
+    }
+    
+    .graph_styled {
+        border: 1px solid #FFFFFF;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 3px;
+        min-width: 300px;
+        width: 900px;
+        height: 100%;
+        padding: .3rem;
+        display: grid;
+    }
+
+    .p {
+        margin-bottom: 20px;
+        padding: .3rem;
+    }
+
+    .h1 {
+        padding: 5rem;
+        margin: 3rem;
+    }
+
+</style>
