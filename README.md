@@ -2,7 +2,12 @@
 
 Dette prosjektet er en applikasjon som har som hovedmål å vise brukerne hvor mye strøm de har brukt frem til dette punktet (17.12.2022 - 07.01.2022), hvor mye de kan forvente å bruke innen utgangen av måneden (opptil 31.01.2023) og hva som er den billigste strømleverandøren for dem, gitt deres forbruksmønster. Husk at dette er et lekeeksempel basert på oppgitte data. 
 
-## Start applikasjon
+1) Forbruks data brukes til å kalkulere forventet forbruk for resten av januar 2023 med SARIMAX (Time Series for seasonal data)
+2) Spot-monthly og spot-hourly priser simuleres, for det er ingen historie tilgjengelig for hvordan de endrer seg over tiden
+3) Brukeren får en anbefalt strømleverandør som har den billigste avtalen over hele perioden (17.12.2022-31.01.2023)
+4) Brukeren får en estimert månedelig kostnad hos den anbefalte leverandøren
+
+## Start applikasjonen
 > Forutsetninger: sørg for at du har Docker installert
 1) Clone the repository
 2) Navigate to your project directory
