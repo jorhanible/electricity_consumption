@@ -18,11 +18,8 @@ Dette prosjektet er en applikasjon som har som hovedmål å vise brukerne hvor m
 6) Access the application at http://localhost:4000
 
 ## Kommentarer
-1) adding + 0.0001 to variable total cost
-2) it will take about five minutes for SARIMAX to run
-3) had to simulate spot prices
-4) SARIMAX provides poor estimation of values
-5) if we did that, we would need more data to forecast forbruk for future
-6) 
-7) + we would need to use external APIs to access data on how forbruk changes between seasons
+*  Fastpris og variabel pris regnes ut på den samme måten. Discord admin ga beskjed at fixedPricePeriod og variablePricePeriod gir et antall måneder når pris varer, så det er samme kostnad for både fastpris og variabel pris. For å unngå tilfellen når den er billigste avtalen og en feil oppstår fordi koden får to verdier i stedet for en, legger jeg til 0.001 til kalkulert kostnad over hele perioden for variabel pris.
+* Når applikasjonen starter, tar det circa 5 minutter for SARIMAX å forutsi strøm forbruk, så vennligst vent litt og ikke oppdater siden.
+* Som jeg sa tidligere, jeg måtte simulere spot-monthly og spot-hourly priser, derfor bruker jeg uniform distribution for å gjøre det. Hvis det var en produkt for kunder, bør vi be dem om å laste opp sin egen data for siste år, for eksempel. Prisene kan da bli tatt fra ekstertnt API.
+* SARIMAX gir ganske dårlig estimering av forventet forbruk fordi det er for lite data tilgjengelig og modellen tar in hyperparameters fra Grid Search som er en begrensende metode.
 
