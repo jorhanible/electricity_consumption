@@ -1,11 +1,9 @@
 # Strøm - regne ut sin egen pris!
 
-## Task description
-This project is an application that aims to show users how much electricity they have used up to this point, how much they can expect to use by the end of the month and what is the cheapest provider for them, given their consumption pattern.
-> Please provide a short description of your project.
+Dette prosjektet er en applikasjon som har som hovedmål å vise brukerne hvor mye strøm de har brukt frem til dette punktet (17.12.2022 - 07.01.2022), hvor mye de kan forvente å bruke innen utgangen av måneden (opptil 31.01.2023) og hva som er den billigste strømleverandøren for dem, gitt deres forbruksmønster. Husk at dette er et lekeeksempel basert på oppgitte data. 
 
-## How to run
-> Pre-requisites: make sure you have Docker installed
+## Start applikasjon
+> Forutsetninger: sørg for at du har Docker installert
 1) Clone the repository
 2) Navigate to your project directory
 3) Build the Docker image
@@ -14,8 +12,7 @@ This project is an application that aims to show users how much electricity they
 > docker run -p 4000:5000 app-name
 6) Access the application at http://localhost:4000
 
-## Comments
-Comments regarding design choices, decisions, or anything at all.
+## Kommentarer
 1) adding + 0.0001 to variable total cost
 2) it will take about five minutes for SARIMAX to run
 3) had to simulate spot prices
