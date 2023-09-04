@@ -11,13 +11,13 @@ def home():
 
 @app.route('/electricity_consumption_plot')
 def electricity_consumption_plot():
-    image_path = stacc.original_electricity_consumption(consumption_df)  # Make sure consumption_df is defined
+    image_path = stacc.original_electricity_consumption(consumption_df)  
 
     return render_template('index.html', image_path=image_path)
 
 @app.route('/comparison_plot')
 def comparison_consumption_plot():
-    image_path_vs = stacc.original_vs_predicted_electricity_consumption(combined_df)  # Make sure consumption_df is defined
+    image_path_vs = stacc.original_vs_predicted_electricity_consumption(combined_df)  
 
     return render_template('index.html', image_path=image_path_vs)
 
